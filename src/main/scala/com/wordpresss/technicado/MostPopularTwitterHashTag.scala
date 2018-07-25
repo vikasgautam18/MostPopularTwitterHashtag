@@ -12,8 +12,8 @@ object MostPopularTwitterHashTag {
   Logger.getLogger("org").setLevel(Level.ERROR)
   def main(args: Array[String]): Unit = {
     if(args.length != 1){
-      println("USAGE: spark-submit --class com.wordpresss.technicado " +
-        "--master local[*] jars/movielens_analysis_2.11-0.1.jar hdfs://path/to/twitter.config")
+      println("USAGE: spark-submit --class com.wordpresss.technicado.MostPopularTwitterHashTag " +
+        "--master local[*] spark/jars/mostpopulartwitterhashtag_2.11-0.1.jar hdfs://path/to/twitter.config")
       System.exit(-1)
     }
     val sparkConf = new SparkConf().setAppName("MostPopularTwitterHashTag")
